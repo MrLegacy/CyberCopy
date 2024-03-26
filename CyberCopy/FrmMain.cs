@@ -97,7 +97,8 @@ namespace CyberCopy
                 return;
             }
             txtResult.Text = text;
-            Clipboard.SetText(text);
+            if(Program.AutoCopy)
+                Clipboard.SetText(text);
         }
 
         private void FrmMain_Load(object sender, EventArgs e)
