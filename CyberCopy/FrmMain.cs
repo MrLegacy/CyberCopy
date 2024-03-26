@@ -141,7 +141,10 @@ namespace CyberCopy
 
         private void MnuSave_Click(object sender, EventArgs e)
         {
-            var saveFileDialog1 = new SaveFileDialog();
+            var saveFileDialog1 = new SaveFileDialog
+            {
+                Filter = @"text files (*.txt)|*.txt|All files (*.*)|*.*",
+            };
             if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
             using (var fs = new FileStream(saveFileDialog1.FileName, FileMode.Create, FileAccess.Write))
             {
