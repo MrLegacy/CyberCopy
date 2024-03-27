@@ -143,6 +143,7 @@ namespace CyberCopy
         {
             var saveFileDialog1 = new SaveFileDialog
             {
+
                 Filter = @"text files (*.txt)|*.txt|All files (*.*)|*.*",
             };
             if (saveFileDialog1.ShowDialog() != DialogResult.OK) return;
